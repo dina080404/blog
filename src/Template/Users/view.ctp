@@ -13,6 +13,4 @@
   <td> <?php echo $user->status ?> </td>
 </tr>
 
-
-
 </table>

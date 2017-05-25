@@ -35,6 +35,8 @@ class UsersController extends AppController {
 
   public function add()
   {
+
+    $user = $this->Users->newEntity();
     //1. check kalau ada post daripada form
       if ($this->request->is('post'))
       {
@@ -56,7 +58,9 @@ class UsersController extends AppController {
           //6.redirect ke senarai index
           return $this->redirect(['action'=>'index']);
         }
+
       }
+          $this->set('user',$user);
     }
 
     public function edit($id=null){
